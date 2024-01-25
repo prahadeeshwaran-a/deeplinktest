@@ -3,21 +3,26 @@
        
     </head>
     <body>
-        <input type = "button" onclick = "getMobileOperatingSystem()" value = "CheckOSType">  
+        <input type = "button" onclick = "getMobileOperatingSystem()" value = "CheckOSType"> 
+        <div id="OsTypePlaceHolder"></div> 
         <script>
             function getMobileOperatingSystem() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+            let osElement =  document.getElementById("OsTypePlaceHolder")
 
             // Windows Phone must come first because its UA also contains "Android"
             if (/windows phone/i.test(userAgent)) {
                 alert("Windows Phone");
                 console.log("Windows Phone");
+                osElement.innerText("Windows Phone");
                 return "Windows Phone";
             }
 
             if (/android/i.test(userAgent)) {
                 alert("Android");
                 console.log("Android");
+                osElement.innerText("Android");
                 return "Android";
             }
 
@@ -25,6 +30,7 @@
             if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
                 alert("IOS");
                 console.log("IOS");
+                osElement.innerText("IOS");
                 return "iOS";
             }
 
