@@ -1,42 +1,52 @@
 <html>
-    <head>
-        <meta name="apple-itunes-app" content="app-id=1553442906">
-    </head>
-    <body>
-        <input type = "button" onclick = "getMobileOperatingSystem()" value = "CheckOSType"> 
-        <div id="OsTypePlaceHolder"></div> 
-        <script>
-            function getMobileOperatingSystem() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  <head>
+    <meta name="apple-itunes-app" content="app-id=1553442906" />
+  </head>
+  <body>
+    <input
+      type="button"
+      onclick="getMobileOperatingSystem()"
+      value="CheckOSType"
+    />
+    <div id="OsTypePlaceHolder"></div>
+    <script>
+      function getInstalledApps() {
+        let temp = navigator.getInstalledRelatedApps();
 
-            let osElement =  document.getElementById("OsTypePlaceHolder")
+        temp.then((x) => console.log(x));
+      }
 
-            // Windows Phone must come first because its UA also contains "Android"
-            if (/windows phone/i.test(userAgent)) {
-                alert("Windows Phone");
-                console.log("Windows Phone");
-                osElement.innerText("Windows Phone");
-                return "Windows Phone";
-            }
+      function getMobileOperatingSystem() {
+        var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
-            if (/android/i.test(userAgent)) {
-                alert("Android");
-                console.log("Android");
-                osElement.innerText("Android");
-                return "Android";
-            }
+        let osElement = document.getElementById("OsTypePlaceHolder");
 
-            // iOS detection from: http://stackoverflow.com/a/9039885/177710
-            if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
-                alert("IOS");
-                console.log("IOS");
-                osElement.innerText("IOS");
-                return "iOS";
-            }
-
-            console.log("Unknown")
-            return "unknown";
+        // Windows Phone must come first because its UA also contains "Android"
+        if (/windows phone/i.test(userAgent)) {
+          alert("Windows Phone");
+          console.log("Windows Phone");
+          osElement.innerText("Windows Phone");
+          return "Windows Phone";
         }
-        </script>
-    </body>
+
+        if (/android/i.test(userAgent)) {
+          alert("Android");
+          console.log("Android");
+          osElement.innerText("Android");
+          return "Android";
+        }
+
+        // iOS detection from: http://stackoverflow.com/a/9039885/177710
+        if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+          alert("IOS");
+          console.log("IOS");
+          osElement.innerText("IOS");
+          return "iOS";
+        }
+
+        console.log("Unknown");
+        return "unknown";
+      }
+    </script>
+  </body>
 </html>
