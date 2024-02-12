@@ -1,0 +1,26 @@
+{
+    "short_name": "MyHealth",
+    "name": "Home - MyHealth Records",
+    "icons": [
+      {
+        "src": "/Img/Themes/Alberta/home-screen.png",
+        "type": "image/png",
+        "sizes": "144x144"
+      }
+    ],
+    "background_color": "#FFFFFF",
+    "theme_color": "#67BCFF",
+    "display": "standalone",
+    "start_url": "/home.aspx",
+    "related_applications": [{
+      "platform": "play",
+      "id": "com.grcdemo.csfw.qa",
+      "url": "https://play.google.com/store/apps/details?id=com.grcdemo.csfw.qa",
+      "fingerprints": [
+        {
+          "type": "sha256_cert",
+          "value": "A8:05:3D:A9:F7:EA:81:26:96:1B:8D:AB:64:DA:7F:67:03:20:0C:EB:A7:5A:97:21:69:AD:3C:0B:C2:28:76:8A"
+        }
+      ]
+    }]
+  }
