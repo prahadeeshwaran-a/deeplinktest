@@ -14,12 +14,12 @@
     "start_url": "/home.aspx",
     "related_applications": [{
       "platform": "play",
-      "id": "com.grcdemo.csfw.qa",
-      "url": "https://play.google.com/store/apps/details?id=com.grcdemo.csfw.qa",
+      "id": "com.grh.instantphr.beechwood",
+      "url": "https://play.google.com/store/apps/details?id=com.grh.instantphr.beechwood",
       "fingerprints": [
         {
           "type": "sha256_cert",
-          "value": "A8:05:3D:A9:F7:EA:81:26:96:1B:8D:AB:64:DA:7F:67:03:20:0C:EB:A7:5A:97:21:69:AD:3C:0B:C2:28:76:8A"
+          "value": "DA:39:62:46:D5:06:2D:A2:DF:55:60:86:08:56:19:0F:C2:73:12:D6:A4:BF:C0:1A:E0:8F:5A:41:E0:35:70:A8"
         }
       ]
     }]
