@@ -14,12 +14,12 @@
     "start_url": "/home.aspx",
     "related_applications": [{
       "platform": "play",
-      "id": "com.grh.instantphr.beechwood",
-      "url": "https://play.google.com/store/apps/details?id=com.grh.instantphr.beechwood",
+      "id": "test_package",
+      "url": "https://play.google.com/store/apps/details?id=test",
       "fingerprints": [
         {
           "type": "sha256_cert",
-          "value": "DA:39:62:46:D5:06:2D:A2:DF:55:60:86:08:56:19:0F:C2:73:12:D6:A4:BF:C0:1A:E0:8F:5A:41:E0:35:70:A8"
+          "value": "test_value"
         }
       ]
     }]
