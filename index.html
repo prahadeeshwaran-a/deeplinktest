@@ -14,13 +14,36 @@
       onclick="getInstalledApps()"
       value="GetInstalledApps"
     />
+
+    <input type="button" onclick="getCurrentBrowser()" value="getCurrentBrowser" />
     <div id="OsTypePlaceHolder"></div>
     <script>
       function getInstalledApps() {
-	alert("alert is working");
+        alert("alert is working");
         let temp = navigator.getInstalledRelatedApps();
 
         temp.then((x) => console.log(x));
+      }
+
+      function getCurrentBrowser() {
+        const userAgent = navigator.userAgent;
+        let browser = "unkown";
+        // Detect browser name
+        browser =
+          /chrome|crios/i.test(userAgent) &&
+          !/opr|opera|chromium|edg|ucbrowser|googlebot/i.test(userAgent)
+            ? "Chrome"
+            : browser;
+
+        browser =
+          /safari/i.test(userAgent) &&
+          !/chromium|edg|ucbrowser|chrome|crios|opr|opera|fxios|firefox/i.test(
+            userAgent
+          )
+            ? "Safari"
+            : browser;
+        alert(browser);
+        return browser;
       }
 
       function getMobileOperatingSystem() {
