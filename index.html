@@ -15,6 +15,7 @@
       value="GetInstalledApps"
     />
 
+    <input type="button" onclick="openAppStore()" value="OpenAppStore"/>
     <input type="button" onclick="getCurrentBrowser()" value="getCurrentBrowser" />
     <div id="OsTypePlaceHolder"></div>
     <script>
@@ -23,6 +24,10 @@
         let temp = navigator.getInstalledRelatedApps();
 
         temp.then((x) => console.log(x));
+      }
+
+      function openAppStore(){
+        window.location.href = "https://itunes.apple.com/us/app/iphr-app/id1553442906"
       }
 
       function getCurrentBrowser() {
