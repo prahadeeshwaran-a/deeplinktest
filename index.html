@@ -19,11 +19,15 @@
       value="GetInstalledApps"
     />
 
+    <a onClick="javascript:try_to_open_app();" href="instantphr://"
+    >Click Here to open App</a>
+
     <input
       type="button"
       class="btnClicked"
       onclick="openAppStore()"
       value="OpenAppStore"
+      
     />
     <input
       type="button"
@@ -32,6 +36,16 @@
     />
     <div id="OsTypePlaceHolder"></div>
     <script>
+
+      function open_appstore() {
+        window.location =
+          'itms-apps://itunes.apple.com/us/app/apple-store/1211076909?mt=8';
+      }
+
+      function try_to_open_app() {
+        setTimeout('open_appstore()', 300);
+      }
+
       function getInstalledApps() {
         alert("alert is working");
         let temp = navigator.getInstalledRelatedApps();
@@ -41,7 +55,7 @@
 
       function openAppStore() {
         window.location.href =
-          "itms-apps://itunes.apple.com/us/app/apple-store/1553442906";
+          "https://itunes.apple.com/us/app/iphr-app/id1553442906";
       }
 
       function getCurrentBrowser() {
