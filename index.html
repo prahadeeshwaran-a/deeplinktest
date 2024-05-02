@@ -9,7 +9,9 @@
       value="CheckOSType"
     />
 
-    <input type="button" class="btnClicked" value="FullStoryCheck"/>
+    <input type="button" class="btnClicked" value="FullStoryCheck" />
+
+    <input type="button" class="btnVisible" value="FullStoryAppearanceCheck" />
 
     <input
       type="button"
@@ -17,7 +19,12 @@
       value="GetInstalledApps"
     />
 
-    <input type="button" class="btnClicked" onclick="openAppStore()" value="OpenAppStore" />
+    <input
+      type="button"
+      class="btnClicked"
+      onclick="openAppStore()"
+      value="OpenAppStore"
+    />
     <input
       type="button"
       onclick="getCurrentBrowser()"
@@ -34,7 +41,7 @@
 
       function openAppStore() {
         window.location.href =
-          "https://itunes.apple.com/us/app/iphr-app/id1553442906";
+          "itms-apps://itunes.apple.com/us/app/apple-store/1553442906";
       }
 
       function getCurrentBrowser() {
